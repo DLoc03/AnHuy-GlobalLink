@@ -1,50 +1,71 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../common/Logo";
 import Button from "../common/Button";
 import IconButton from "../common/IconButton";
-import { MenuIcon } from "lucide-react";
+import { Menu, MenuIcon } from "lucide-react";
 import MenuDropdown from "../ui/MenuDropdown";
 import { menuHeader } from "@/constants/menus";
+import HoverUnderlineItem from "../common/HoverUnderlineItem";
 
 function Header() {
+  const [isScroll, setIsScroll] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  const [isClick, setIsClick] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScroll(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleOpenMenu = () => {
+    setIsClick(!isClick);
+    setOpenMenu(!openMenu);
+  };
+
   return (
-    <div
-      className={`shadow-main fixed top-0 z-50 flex w-full justify-between bg-black/50 px-4 py-3 text-white backdrop-blur-sm lg:px-8 xl:px-16`}
-    >
-      <div className="z-20 w-full">
-        <Logo />
-      </div>
-      <div className="flex items-center gap-2 sm:gap-6">
-        <div className="relative">
-          <IconButton
+    <header className={`fixed top-0 z-50 w-full shadow-xl`}>
+      <div
+        className={`absolute z-10 h-full w-full transition-all duration-300 ${isScroll ? "bg-primary opacity-90" : "bg-black opacity-70"}`}
+      />
+      <div className="relative z-50 flex h-full w-full justify-between px-4 py-3 sm:px-6 lg:px-12">
+        <Logo size={60} />
+        <div className="hidden items-center gap-4 sm:flex">
+          <HoverUnderlineItem
+            label={"Dịch vụ"}
+            className={"w-20 py-3"}
+            borderColor={"white"}
+            textStyle={"text-md text-white"}
+          />
+          <Button
+            label={"Liên hệ"}
             className={
-              "transform rounded-full p-2 duration-200 active:rotate-180 active:bg-white/20 sm:hidden"
+              "rounded-full border-2 border-white px-6 py-3 text-white hover:bg-white/20"
             }
-            onClick={() => setOpenMenu(!openMenu)}
-          >
-            <MenuIcon />
-          </IconButton>
-          <MenuDropdown
-            open={openMenu}
-            onClose={() => setOpenMenu(false)}
-            className={"text-md mt-3 w-fit rounded-md bg-black/80 font-medium"}
-            align={"right"}
-            menus={menuHeader}
           />
         </div>
-        <Button
-          label={"Dịch vụ"}
-          className={"hidden hover:underline sm:inline-block"}
-        />
-        <Button
-          label="Liên hệ"
-          className={
-            "hidden min-w-fit rounded-full border-2 border-white px-6 py-2 hover:bg-white/20 sm:inline-block"
-          }
-        />
+        <div className="relative flex items-center sm:hidden">
+          <IconButton
+            className={"text-primary transform bg-amber-300 p-2 duration-200"}
+            onClick={handleOpenMenu}
+          >
+            <Menu
+              className={`${isClick && "rotate-180"} transform duration-200`}
+            />
+          </IconButton>
+          <MenuDropdown
+            menus={menuHeader}
+            open={openMenu}
+            onClose={() => setOpenMenu(false)}
+            className={
+              "text-primary divide-y divide-amber-400 bg-white font-bold shadow-lg"
+            }
+          />
+        </div>
       </div>
-    </div>
+    </header>
   );
 }
 
