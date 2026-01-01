@@ -1,19 +1,17 @@
-import Footer from '@/components/layout/Footer'
-import Header from '@/components/layout/Header'
-import HeroSection from '@/components/ui/HeroSection'
-import React from 'react'
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
+import HeroSection from "@/components/ui/HeroSection";
+import React from "react";
 
 function Portfolio() {
   return (
     <>
-        <Header/>
-        <HeroSection/>
-        <div>
-
-        </div>
-        <Footer/>
+      <Header />
+      <HeroSection />
+      <div></div>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default Portfolio
+export default Portfolio;
