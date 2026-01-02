@@ -28,7 +28,7 @@ function Header() {
   return (
     <header className={`fixed top-0 z-50 w-full shadow-xl`}>
       <div
-        className={`absolute z-10 h-full w-full transition-all duration-300 ${isScroll ? "bg-primary opacity-90" : "bg-black opacity-70"}`}
+        className={`absolute z-10 h-full w-full transition-all duration-300 ${isScroll ? "bg-secondary opacity-90" : "bg-black opacity-70"}`}
       />
       <div className="relative z-50 flex h-full justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Logo size={60} />
