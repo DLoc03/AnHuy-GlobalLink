@@ -19,7 +19,7 @@ function HeroSection() {
   };
 
   useEffect(() => {
-    timeRef.current = setInterval(nextSlide, 3000);
+    timeRef.current = setInterval(nextSlide, 8000);
     return () => clearInterval(timeRef.current);
   }, [activeIndex]);
 
@@ -76,7 +76,7 @@ function HeroSection() {
       })}
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 z-40 flex -translate-x-1/2 items-center gap-2 gap-3">
+      <div className="absolute bottom-6 left-1/2 z-40 flex -translate-x-1/2 items-center gap-2">
         <IconButton
           onClick={prevSlide}
           className="z-40 flex rounded-full bg-black/40 p-3 text-white hover:bg-black/60"
@@ -87,7 +87,7 @@ function HeroSection() {
           <button
             key={i}
             onClick={() => setActiveIndex(i)}
-            className={`h-2 w-2 rounded-full transition-all ${
+            className={`h-2 w-2 rounded-full transition-all duration-200 ${
               i === activeIndex ? "w-6 bg-white" : "bg-white/50"
             }`}
           />
