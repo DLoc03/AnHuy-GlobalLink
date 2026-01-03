@@ -16,11 +16,13 @@ function CommitSection() {
         </div>
 
         <div className="col-span-5 sm:col-span-3">
-          <h1 className="text-3xl font-medium">Cam kết của chúng tôi</h1>
+          <h1 className="text-xl font-medium sm:max-w-sm sm:text-3xl lg:max-w-md">
+            Cam kết của chúng tôi
+          </h1>
         </div>
 
         <div className="col-span-5 sm:col-span-2">
-          <p className="font-light text-gray-500">
+          <p className="text-md font-light text-gray-500 sm:max-w-sm lg:max-w-md">
             Chúng tôi mang đến các giải pháp vận chuyển nhanh chóng, an toàn,
             tối ưu chi phí và cam kết dịch vụ uy tín, chất lượng cao
           </p>

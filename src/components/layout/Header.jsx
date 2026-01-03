@@ -69,7 +69,7 @@ function Header({ onScroll }) {
             menus={menuHeader}
             open={openMenu}
             onClose={() => setOpenMenu(false)}
-            className={"text-primary w-fit bg-white font-bold shadow-lg"}
+            className={"text-primary w-fit bg-white font-medium shadow-lg"}
             onClick={onScroll}
           />
         </div>
