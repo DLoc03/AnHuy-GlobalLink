@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Logo from "../common/Logo";
 import Button from "../common/Button";
 import IconButton from "../common/IconButton";
@@ -12,6 +12,7 @@ function Header() {
   const [isScroll, setIsScroll] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [isClick, setIsClick] = useState(false);
+  const menuRef = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,10 +23,9 @@ function Header() {
   }, []);
 
   const handleOpenMenu = () => {
-    setIsClick(!isClick);
-    setOpenMenu(!openMenu);
+    setIsClick((prev) => !prev);
+    setOpenMenu((prev) => !prev);
   };
-
   return (
     <header className={`fixed top-0 z-50 w-full shadow-xl`}>
       <div
@@ -52,7 +52,7 @@ function Header() {
             className={`bg-primary rounded-full px-6 py-3 text-white`}
           />
         </div>
-        <div className="relative flex items-center sm:hidden">
+        <div ref={menuRef} className="relative flex items-center sm:hidden">
           <IconButton
             className={"bg-primary transform p-2 text-white duration-200"}
             onClick={handleOpenMenu}
@@ -62,6 +62,7 @@ function Header() {
             />
           </IconButton>
           <MenuDropdown
+            containerRef={menuRef}
             menus={menuHeader}
             open={openMenu}
             onClose={() => setOpenMenu(false)}

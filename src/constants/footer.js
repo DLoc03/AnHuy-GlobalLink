@@ -1,20 +1,27 @@
-const contacts = {
-  heading: "Liên hệ",
-  content: [
-    {
-      url: "",
-      name: "118/32/11A – Thạnh Xuân 38, P. Thới An, TP.Hồ Chí Minh",
-    },
-    {
-      url: "",
-      name: "+ 84 91 557 1980 / +84 91 302 4168",
-    },
-    {
-      url: "",
-      name: "ceo@anhuygloballink.com",
-    },
-  ],
-};
+import { Mail, MapPin, Phone } from "lucide-react";
+
+const contacts = [
+  {
+    url: "https://www.google.com/maps/search/?api=1&query=118/32/11A+Thạnh+Xuân+38,+Thới+An,+Hồ+Chí+Minh",
+    name: "118/32/11A – Thạnh Xuân 38, P. Thới An, TP. Hồ Chí Minh",
+    icon: MapPin,
+  },
+  {
+    url: "tel:+84915571980",
+    name: "+ 84 91 557 1980",
+    icon: Phone,
+  },
+  {
+    url: "tel:+84913024168",
+    name: "+84 91 302 4168",
+    icon: Phone,
+  },
+  {
+    url: "mailto:ceo@anhuygloballink.com",
+    name: "ceo@anhuygloballink.com",
+    icon: Mail,
+  },
+];
 
 const services = {
   heading: "Dịch vụ",
@@ -25,10 +32,10 @@ const services = {
     },
     {
       id: "2",
-      name: "Dịch vụ du lịch chuyên chuyến Trung Quốc",
+      name: "Du lịch chuyên chuyến Trung Quốc",
     },
     {
-      id: "2",
+      id: "3",
       name: "Tư vấn thương mại quốc tế",
     },
   ],

@@ -8,7 +8,6 @@ function Portfolio() {
     <>
       <Header />
       <HeroSection />
-      <HeroSection />
 
       <div></div>
       <Footer />
