@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import { sectionIds } from "./sectionId";
 
 const contacts = [
   {
@@ -27,15 +28,15 @@ const services = {
   heading: "Dịch vụ",
   content: [
     {
-      id: "1",
+      id: sectionIds.service,
       name: "Vận chuyển hàng hoá nhanh",
     },
     {
-      id: "2",
+      id: sectionIds.service,
       name: "Du lịch chuyên chuyến Trung Quốc",
     },
     {
-      id: "3",
+      id: sectionIds.service,
       name: "Tư vấn thương mại quốc tế",
     },
   ],
@@ -45,11 +46,11 @@ const abouts = {
   heading: "Về An Huy Global Link",
   content: [
     {
-      id: "1",
+      id: sectionIds.about,
       name: "Về chúng tôi",
     },
     {
-      id: "2",
+      id: sectionIds.why_choose_us,
       name: "Tại sao chọn chúng tôi",
     },
   ],

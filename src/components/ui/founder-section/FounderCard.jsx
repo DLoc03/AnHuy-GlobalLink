@@ -1,8 +1,12 @@
+import { sectionIds } from "@/constants/sectionId";
 import React from "react";
 
 function FounderCard({ founder }) {
   return (
-    <div className="relative flex h-full flex-col rounded-3xl bg-white sm:flex-row">
+    <div
+      id={sectionIds.founder}
+      className="relative flex h-full flex-col rounded-3xl bg-white sm:flex-row"
+    >
       {/* IMAGE */}
       <div className="relative w-full sm:w-2/5">
         <img

@@ -7,6 +7,7 @@ import MenuDropdown from "../ui/MenuDropdown";
 import { menuHeader } from "@/constants/menus";
 import HoverUnderlineItem from "../common/HoverUnderlineItem";
 import { headers } from "@/constants/header";
+import { sectionIds } from "@/constants/sectionId";
 
 function Header({ onScroll }) {
   const [isScroll, setIsScroll] = useState(false);
@@ -51,6 +52,7 @@ function Header({ onScroll }) {
           <Button
             label={"Liên hệ"}
             className={`bg-primary rounded-full px-6 py-3 text-white`}
+            onClick={() => onScroll?.(sectionIds.contact)}
           />
         </div>
         <div ref={menuRef} className="relative flex items-center xl:hidden">
