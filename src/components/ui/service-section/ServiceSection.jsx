@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import ServiceCard from "./ServiceCard";
 
 import { motion, AnimatePresence } from "framer-motion";
+import HeadingPill from "@/components/common/HeadingPill";
 
 function ServiceSection() {
   const [selected, setSelected] = useState();
@@ -13,9 +14,7 @@ function ServiceSection() {
         id={sectionIds.service}
         className="mx-auto max-w-7xl space-y-2 sm:space-y-3"
       >
-        <div className="border-primary text-primary w-fit rounded-full border-2 px-6 py-1 font-medium">
-          Dịch vụ
-        </div>
+        <HeadingPill label={"Dịch vụ"} />
         <div className="flex flex-col items-end justify-between gap-y-1 sm:flex-row">
           <h1 className="text-xl font-medium sm:max-w-sm sm:text-3xl lg:max-w-md">
             Cung cấp chất lượng vượt trội và giải pháp tối ưu
