@@ -40,7 +40,7 @@ function AboutSection() {
         </motion.div>
         <div className="col-span-2 space-y-3 sm:space-y-6">
           <motion.div
-            className="relative col-span-3 h-28 w-full cursor-pointer overflow-hidden rounded-xl sm:h-47"
+            className="relative col-span-3 h-28 w-full cursor-pointer overflow-hidden rounded-3xl sm:h-47"
             onClick={() => setSelected(abouts[1])}
             whileHover={{ scale: 1.02 }}
           >
@@ -63,7 +63,7 @@ function AboutSection() {
             </div>
           </motion.div>
           <motion.div
-            className="relative col-span-3 h-28 w-full cursor-pointer overflow-hidden rounded-xl sm:h-47"
+            className="relative col-span-3 h-28 w-full cursor-pointer overflow-hidden rounded-3xl sm:h-47"
             onClick={() => setSelected(abouts[2])}
             whileHover={{ scale: 1.02 }}
           >
@@ -91,7 +91,7 @@ function AboutSection() {
       <AnimatePresence>
         {selected && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4"
+            className="fixed top-0 left-0 z-50 flex min-h-dvh w-screen items-center justify-center bg-black/80 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

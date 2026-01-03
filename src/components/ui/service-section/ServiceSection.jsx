@@ -35,7 +35,7 @@ function ServiceSection() {
       <AnimatePresence>
         {selected && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4"
+            className="fixed top-0 left-0 z-50 flex min-h-dvh w-screen items-center justify-center bg-black/80 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
