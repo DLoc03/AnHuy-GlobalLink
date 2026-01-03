@@ -8,7 +8,7 @@ function PartnerSection() {
   return (
     <div
       id={sectionIds.partner}
-      className="grid h-full grid-cols-2 gap-x-12 gap-y-3"
+      className="grid h-full grid-cols-2 gap-x-12 gap-y-3 pb-12 sm:pb-0"
     >
       <div className="col-span-2">
         <HeadingPill label={"Đối tác chiến lược"} />
@@ -31,7 +31,7 @@ function PartnerSection() {
         <img
           src={partner}
           alt="Đối tác chiến lược"
-          className="relative z-10 h-64 w-[95%] rounded-3xl object-cover shadow-lg"
+          className="relative z-10 h-60 w-[95%] rounded-3xl object-cover shadow-lg"
         />
         <div className="border-primary absolute top-8 right-0 h-60 w-[90%] rounded-3xl border-4" />
       </div>

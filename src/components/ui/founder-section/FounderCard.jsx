@@ -25,7 +25,7 @@ function FounderCard({ founder }) {
       </div>
 
       {/* CONTENT */}
-      <div className="flex flex-1 flex-col p-5">
+      <div className="flex flex-1 flex-col py-5 sm:p-5">
         {/* Header */}
         <div>
           <span className="bg-primary/10 text-primary inline-block rounded-full px-3 py-1 text-xs font-semibold tracking-wide">
