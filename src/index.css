@@ -5,6 +5,7 @@
 }
 
 @theme {
-  --color-primary: #182953;
+  --color-primary: #3870bb;
+  --color-secondary: #062754;
   --shadow-main: rgba(0, 0, 0, 0.1) 0px 5px 25px 0px;
 }

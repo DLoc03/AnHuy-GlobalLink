@@ -1,10 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { slides } from "@/constants/slideBanner";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Search } from "lucide-react";
 import IconButton from "../common/IconButton";
+import { appContent } from "@/constants/global";
+import Button from "../common/Button";
 
 function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
   const [direction, setDirection] = useState("next");
   const timeRef = useRef();
   const total = slides?.length;
@@ -19,12 +23,17 @@ function HeroSection() {
   };
 
   useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 50);
+    return () => clearTimeout(t);
+  }, []);
+
+  useEffect(() => {
     timeRef.current = setInterval(nextSlide, 8000);
     return () => clearInterval(timeRef.current);
   }, [activeIndex]);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-160 w-full overflow-hidden xl:h-screen">
       {slides.map((item, index) => {
         const isActive = index === activeIndex;
 
@@ -40,7 +49,7 @@ function HeroSection() {
                 {/* Animated layer */}
                 <div
                   className={`h-full w-full bg-cover bg-center transition-transform duration-8000 ease-linear ${
-                    isActive
+                    isActive && mounted
                       ? "translate-x-0 scale-[1.3]"
                       : direction === "next"
                         ? "translate-x-10 scale-[1.15]"
@@ -55,6 +64,7 @@ function HeroSection() {
             <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/40 to-transparent" />
 
             {/* Content */}
+
             <div
               className={`relative z-30 flex h-full max-w-7xl items-center px-8 transition-all duration-700 ${
                 isActive
@@ -64,11 +74,22 @@ function HeroSection() {
                     : "translate-x-20 opacity-0"
               } `}
             >
-              <div className="max-w-xl text-white">
-                <h2 className="text-4xl leading-tight font-bold">
+              <div className="max-w-xl space-y-4 text-white">
+                <div className="w-fit rounded-full border-2 border-white px-3 py-1 text-nowrap text-white uppercase">
+                  {appContent.company_name}
+                </div>
+                <h2 className="text-4xl leading-tight font-bold text-shadow-2xs">
                   {item.title}
                 </h2>
-                <p className="mt-4 text-lg text-white/80">{item.subTitle}</p>
+                <p className="text-lg text-white/80">{item.subTitle}</p>
+                <Button
+                  label={"Dịch vụ của chúng tôi"}
+                  className={
+                    "scale-105 transform rounded-full border-2 border-white px-3 py-2 duration-200 hover:bg-white/20 active:bg-white/20"
+                  }
+                >
+                  <Search />
+                </Button>
               </div>
             </div>
           </div>
