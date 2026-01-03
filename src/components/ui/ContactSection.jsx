@@ -69,8 +69,6 @@ function ContactSection() {
         .finally(() => {
           setLoading(false);
         });
-
-      console.log("Submit form", formData);
     }
   };
 
