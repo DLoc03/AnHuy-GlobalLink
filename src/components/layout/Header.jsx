@@ -32,10 +32,10 @@ function Header({ onScroll }) {
         className={`absolute z-10 h-full w-full bg-white transition-all duration-300`}
       />
       <div className="relative z-50 flex h-full w-full justify-between px-4 sm:px-6 lg:px-12">
-        <div className="sm:flex-1">
+        <div className="flex justify-start sm:flex-1">
           <Logo size={80} />
         </div>
-        <div className="hidden flex-8 items-center justify-center gap-4 sm:flex xl:gap-8">
+        <div className="hidden flex-8 items-center justify-center gap-4 xl:flex xl:gap-8">
           {headers.map((menu) => (
             <HoverUnderlineItem
               key={menu.id}
@@ -47,13 +47,13 @@ function Header({ onScroll }) {
             />
           ))}
         </div>
-        <div className="hidden flex-1 items-center justify-end sm:flex">
+        <div className="hidden flex-1 items-center justify-end xl:flex">
           <Button
             label={"Liên hệ"}
             className={`bg-primary rounded-full px-6 py-3 text-white`}
           />
         </div>
-        <div ref={menuRef} className="relative flex items-center sm:hidden">
+        <div ref={menuRef} className="relative flex items-center xl:hidden">
           <IconButton
             className={"bg-primary transform p-2 text-white duration-200"}
             onClick={handleOpenMenu}
@@ -67,7 +67,7 @@ function Header({ onScroll }) {
             menus={menuHeader}
             open={openMenu}
             onClose={() => setOpenMenu(false)}
-            className={"text-primary w-40 bg-white font-bold shadow-lg"}
+            className={"text-primary w-fit bg-white font-bold shadow-lg"}
             onClick={onScroll}
           />
         </div>

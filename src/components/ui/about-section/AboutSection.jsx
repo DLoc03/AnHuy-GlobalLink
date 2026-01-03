@@ -16,7 +16,7 @@ function AboutSection() {
           <HeadingPill label={"Về chúng tôi"} />
         </div>
         <motion.div
-          className="relative col-span-3 h-60 w-full cursor-pointer overflow-hidden rounded-xl sm:h-100"
+          className="relative col-span-3 h-60 w-full cursor-pointer overflow-hidden rounded-3xl sm:h-100"
           onClick={() => setSelected(abouts[0])}
           whileHover={{ scale: 1.02 }}
         >
@@ -24,7 +24,7 @@ function AboutSection() {
           <motion.img
             src={abouts[0].image}
             layoutId={abouts[0].id}
-            className="h-full w-full object-cover object-top"
+            className="h-full w-full rounded-3xl object-cover object-top"
           />
 
           {/* TEXT */}
