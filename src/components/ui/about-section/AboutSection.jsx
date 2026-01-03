@@ -98,15 +98,15 @@ function AboutSection() {
             onClick={() => setSelected(null)}
           >
             <motion.div
-              className="w-full max-w-4xl overflow-hidden rounded-2xl bg-neutral-900"
+              className="flex max-h-[60vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-neutral-900 sm:max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               {/* IMAGE + TITLE OVERLAY */}
-              <div className="relative">
+              <div className="relative h-56 sm:h-72">
                 <motion.img
                   src={selected.image}
                   layoutId={selected.id}
-                  className="h-65 w-full object-cover object-top sm:h-100"
+                  className="h-full w-full object-cover object-center"
                 />
 
                 {/* Gradient overlay */}
@@ -124,7 +124,7 @@ function AboutSection() {
 
               {/* CONTENT */}
               <motion.div
-                className="text-md space-y-3 overflow-y-auto bg-black/80 p-4 text-gray-200"
+                className="text-md custom-scroll space-y-3 overflow-y-auto bg-black/80 p-4 text-gray-200"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
               >
