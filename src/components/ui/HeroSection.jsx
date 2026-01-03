@@ -48,7 +48,7 @@ function HeroSection() {
               <div className="absolute top-1/2 left-1/2 h-[130%] w-[130%] -translate-x-1/2 -translate-y-1/2">
                 {/* Animated layer */}
                 <div
-                  className={`h-full w-full bg-cover bg-center transition-transform duration-8000 ease-linear ${
+                  className={`h-full w-full bg-center transition-transform duration-8000 ease-linear ${
                     isActive && mounted
                       ? "translate-x-0 scale-[1.3]"
                       : direction === "next"

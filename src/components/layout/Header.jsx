@@ -8,7 +8,7 @@ import { menuHeader } from "@/constants/menus";
 import HoverUnderlineItem from "../common/HoverUnderlineItem";
 import { headers } from "@/constants/header";
 
-function Header() {
+function Header({ onScroll }) {
   const [isScroll, setIsScroll] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [isClick, setIsClick] = useState(false);
@@ -43,6 +43,7 @@ function Header() {
               className={"w-fit py-3"}
               borderColor={"secondary"}
               textStyle={"text-md text-secondary font-medium"}
+              onClick={() => onScroll?.(menu.id)}
             />
           ))}
         </div>
@@ -66,9 +67,8 @@ function Header() {
             menus={menuHeader}
             open={openMenu}
             onClose={() => setOpenMenu(false)}
-            className={
-              "text-primary divide-y divide-amber-400 bg-white font-bold shadow-lg"
-            }
+            className={"text-primary w-40 bg-white font-bold shadow-lg"}
+            onClick={onScroll}
           />
         </div>
       </div>
