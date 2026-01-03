@@ -2,6 +2,7 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import AboutSection from "@/components/ui/about-section/AboutSection";
 import HeroSection from "@/components/ui/HeroSection";
+import ServiceSection from "@/components/ui/service-section/ServiceSection";
 import React from "react";
 
 function Portfolio() {
@@ -19,6 +20,7 @@ function Portfolio() {
 
       <div className="h-full space-y-6 bg-white px-2 py-6 xl:px-0">
         <AboutSection />
+        <ServiceSection />
       </div>
       <Footer />
     </>
