@@ -94,7 +94,7 @@ function AboutSection() {
             onClick={() => setSelected(null)}
           >
             <motion.div
-              className="w-full max-w-7xl overflow-hidden rounded-2xl bg-neutral-900"
+              className="w-full max-w-4xl overflow-hidden rounded-2xl bg-neutral-900"
               onClick={(e) => e.stopPropagation()}
             >
               {/* IMAGE + TITLE OVERLAY */}
@@ -102,7 +102,7 @@ function AboutSection() {
                 <motion.img
                   src={selected.image}
                   layoutId={selected.id}
-                  className="h-65 w-full object-cover object-top sm:h-120"
+                  className="h-65 w-full object-cover object-top sm:h-100"
                 />
 
                 {/* Gradient overlay */}
