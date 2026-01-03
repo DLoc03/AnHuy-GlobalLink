@@ -6,7 +6,7 @@ import Button from "../common/Button";
 import Input from "../common/Input";
 import { Send } from "lucide-react";
 
-function Footer() {
+function Footer({ onScroll }) {
   return (
     <footer className="relative w-full">
       <div className="to-secondary absolute z-10 h-full w-full bg-linear-to-r from-black opacity-90" />
@@ -42,11 +42,12 @@ function Footer() {
               {abouts.heading}
             </h1>
             <div className="space-y-1">
-              {abouts.content.map((about) => (
+              {abouts.content.map((about, index) => (
                 <Button
-                  key={about.id}
+                  key={index}
                   label={about.name}
                   className="py-1 text-sm text-wrap text-white hover:underline active:underline"
+                  onClick={() => onScroll?.(about.id)}
                 />
               ))}
             </div>
@@ -56,11 +57,12 @@ function Footer() {
               {services.heading}
             </h1>
             <div className="space-y-1">
-              {services.content.map((about) => (
+              {services.content.map((about, index) => (
                 <Button
-                  key={about.id}
+                  key={index}
                   label={about.name}
                   className="py-1 text-sm text-wrap text-white hover:underline active:underline"
+                  onClick={() => onScroll?.(about.id)}
                 />
               ))}
             </div>

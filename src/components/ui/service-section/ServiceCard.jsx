@@ -13,9 +13,12 @@ function ServiceCard({ service, onSelected }) {
         layoutId={service.id}
         className="h-60 w-full rounded-3xl object-cover"
       />
-      <div className="absolute top-3 left-4 space-y-1">
-        {service.content.map((heading) => (
-          <div className="w-fit rounded-full border-2 border-white bg-black/40 px-3 py-1 text-xs text-white shadow">
+      <div className="absolute top-3 left-2 max-w-[80%] space-y-1">
+        {service.content.map((heading, index) => (
+          <div
+            key={index}
+            className="w-fit rounded-full border-2 border-white bg-black/40 px-3 py-1 text-xs text-white shadow"
+          >
             {heading.title}
           </div>
         ))}

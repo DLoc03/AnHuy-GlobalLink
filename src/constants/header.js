@@ -6,23 +6,23 @@ const headers = [
     label: "Về chúng tôi",
   },
   {
-    id: "service",
+    id: sectionIds.service,
     label: "Dịch vụ",
   },
   {
-    id: "team",
+    id: sectionIds.founder,
     label: "Đội ngũ sáng lập",
   },
   {
-    id: "partner",
+    id: sectionIds.partner,
     label: "Đối tác chiến lược",
   },
   {
-    id: "commit",
+    id: sectionIds.commit,
     label: "Cam kết",
   },
   {
-    id: "why-choose-us",
+    id: sectionIds.why_choose_us,
     label: "Tại sao chọn chúng tôi",
   },
 ];
