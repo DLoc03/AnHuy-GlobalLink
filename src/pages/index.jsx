@@ -21,7 +21,7 @@ function Portfolio() {
   return (
     <div className="bg-white">
       <Header onScroll={handleScrollSection} />
-      <HeroSection />
+      <HeroSection onSCroll={handleScrollSection} />
 
       <div className="mx-auto h-full max-w-7xl space-y-6 px-2 py-6 xl:px-0">
         <AboutSection />

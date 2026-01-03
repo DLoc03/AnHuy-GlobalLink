@@ -1,15 +1,15 @@
 import React from "react";
 
-function Input({
+function TextAreaInput({
   label,
   placeholder,
-  onChange,
   value,
+  onChange,
   className = "",
   disabled = false,
   required = false,
   error = "",
-  type = "text",
+  rows = 4,
 }) {
   return (
     <div className="space-y-1">
@@ -20,13 +20,13 @@ function Input({
         </p>
       )}
 
-      <input
-        type={type}
+      <textarea
+        rows={rows}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
         disabled={disabled}
-        className={`w-full rounded-full border px-6 py-3 text-sm transition focus:outline-none ${
+        className={`w-full resize-none rounded-2xl border px-6 py-3 text-sm transition focus:outline-none ${
           error
             ? "border-red-500 focus:ring-2 focus:ring-red-300"
             : "focus:border-primary focus:ring-primary/30 border-gray-300 focus:ring-2"
@@ -38,4 +38,4 @@ function Input({
   );
 }
 
-export default Input;
+export default TextAreaInput;

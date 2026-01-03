@@ -28,13 +28,13 @@ function CommitSection() {
           </p>
         </div>
 
-        <div className="col-span-5 sm:col-span-3">
+        <div className="col-span-5 xl:col-span-3">
           <CommitCard commit={commits[0]} onSelected={setSelected} />
         </div>
-        <div className="col-span-5 sm:col-span-1">
+        <div className="col-span-5 sm:col-span-3 xl:col-span-1">
           <CommitCard commit={commits[1]} onSelected={setSelected} />
         </div>
-        <div className="col-span-5 sm:col-span-1">
+        <div className="col-span-5 sm:col-span-2 xl:col-span-1">
           <CommitCard commit={commits[2]} onSelected={setSelected} />
         </div>
       </div>

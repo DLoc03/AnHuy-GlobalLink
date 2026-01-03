@@ -4,8 +4,9 @@ import { ArrowLeft, ArrowRight, Search } from "lucide-react";
 import IconButton from "../common/IconButton";
 import { appContent } from "@/constants/global";
 import Button from "../common/Button";
+import { sectionIds } from "@/constants/sectionId";
 
-function HeroSection() {
+function HeroSection({ onSCroll }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [mounted, setMounted] = useState(false);
 
@@ -87,6 +88,7 @@ function HeroSection() {
                   className={
                     "scale-105 transform rounded-full border-2 border-white px-3 py-2 duration-200 hover:bg-white/20 active:bg-white/20"
                   }
+                  onClick={() => onSCroll?.(sectionIds.service)}
                 >
                   <Search />
                 </Button>
