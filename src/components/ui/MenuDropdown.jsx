@@ -32,7 +32,7 @@ function MenuDropdown({
       {menus.map((menu) => (
         <button
           key={menu.id}
-          className="w-full px-3 py-2 text-left"
+          className="w-fit px-3 py-2 text-left text-nowrap"
           onClick={() => onClick?.(menu.id)}
         >
           {menu.label}
