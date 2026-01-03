@@ -7,6 +7,7 @@ function MenuDropdown({
   onClose,
   align,
   containerRef,
+  onClick,
 }) {
   useEffect(() => {
     function handleClickOutside(event) {
@@ -29,7 +30,11 @@ function MenuDropdown({
       } ${open ? "opacity-100" : "opacity-0"}`}
     >
       {menus.map((menu) => (
-        <button key={menu.id} className="w-full px-3 py-2 text-left">
+        <button
+          key={menu.id}
+          className="w-full px-3 py-2 text-left"
+          onClick={() => onClick?.(menu.id)}
+        >
           {menu.label}
         </button>
       ))}

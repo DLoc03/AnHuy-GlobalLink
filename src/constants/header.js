@@ -1,6 +1,8 @@
+import { sectionIds } from "./sectionId";
+
 const headers = [
   {
-    id: "about",
+    id: sectionIds.about,
     label: "Về chúng tôi",
   },
   {
