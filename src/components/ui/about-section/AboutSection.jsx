@@ -2,6 +2,7 @@ import { sectionIds } from "@/constants/sectionId";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { abouts } from "@/constants/about";
+import HeadingPill from "@/components/common/HeadingPill";
 
 function AboutSection() {
   const [selected, setSelected] = useState();
@@ -9,8 +10,11 @@ function AboutSection() {
     <>
       <div
         id={sectionIds.about}
-        className="mx-auto grid h-60 max-w-7xl grid-cols-5 gap-3 sm:h-100 sm:gap-6"
+        className="mx-auto grid h-70 max-w-7xl grid-cols-5 gap-x-3 gap-y-3 sm:h-120 sm:gap-x-6"
       >
+        <div className="col-span-5">
+          <HeadingPill label={"Về chúng tôi"} />
+        </div>
         <motion.div
           className="relative col-span-3 h-60 w-full cursor-pointer overflow-hidden rounded-xl sm:h-100"
           onClick={() => setSelected(abouts[0])}
