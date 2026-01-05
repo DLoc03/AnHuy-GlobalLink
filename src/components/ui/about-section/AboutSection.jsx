@@ -1,8 +1,10 @@
 import { sectionIds } from "@/constants/sectionId";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, animate } from "framer-motion";
 import { abouts } from "@/constants/about";
 import HeadingPill from "@/components/common/HeadingPill";
+import MotionWrapper from "@/common/animations/MotionWrapper";
+import { fadeInUp } from "@/common/animations/motionVariants";
 
 function AboutSection() {
   const [selected, setSelected] = useState();
@@ -12,13 +14,17 @@ function AboutSection() {
         id={sectionIds.about}
         className="mx-auto grid h-70 max-w-7xl grid-cols-5 gap-x-3 gap-y-3 sm:h-120 sm:gap-x-6"
       >
-        <div className="col-span-5">
+        <MotionWrapper variant={fadeInUp} className="col-span-5">
           <HeadingPill label={"Về chúng tôi"} />
-        </div>
+        </MotionWrapper>
         <motion.div
           className="relative col-span-3 h-60 w-full cursor-pointer overflow-hidden rounded-3xl sm:h-100"
           onClick={() => setSelected(abouts[0])}
           whileHover={{ scale: 1.02 }}
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp(0.2)}
+          viewport={{ once: true }}
         >
           {/* IMAGE */}
           <motion.img
@@ -43,6 +49,10 @@ function AboutSection() {
             className="relative col-span-3 h-28 w-full cursor-pointer overflow-hidden rounded-3xl sm:h-47"
             onClick={() => setSelected(abouts[1])}
             whileHover={{ scale: 1.02 }}
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp(0.4)}
+            viewport={{ once: true }}
           >
             {/* IMAGE */}
             <motion.img
@@ -66,6 +76,10 @@ function AboutSection() {
             className="relative col-span-3 h-28 w-full cursor-pointer overflow-hidden rounded-3xl sm:h-47"
             onClick={() => setSelected(abouts[2])}
             whileHover={{ scale: 1.02 }}
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp(0.6)}
+            viewport={{ once: true }}
           >
             {/* IMAGE */}
             <motion.img
