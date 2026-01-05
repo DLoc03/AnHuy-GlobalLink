@@ -16,6 +16,6 @@ export const founders = [
     position: "Nhà sáng lập",
     image: ben_tran,
     content:
-      "Mr. Huy Ben Trần, đồng sáng lập công ty, mang đến kỹ năng chuyên môn trong lĩnh vực du lịch giao thương và xuất nhập khẩu. Ông có một mạng lưới đối tác rộng lớn tại các thị trường Trung Quốc, Châu Á, và Bắc Âu, giúp các doanh nghiệp tiếp cận các thị trường quan trọng và nâng cao khả năng cạnh tranh.",
+      "Mr. Huy Ben Trần, đồng sáng lập công ty, đã có kinh nghiệm trong ngành hàng không và điều hành khai thác mặt đất, mang đến kỹ năng chuyên môn trong lĩnh vực du lịch giao thương và xuất nhập khẩu. Ông có một mạng lưới đối tác rộng lớn tại các thị trường Trung Quốc, Châu Á, và Bắc Âu, giúp các doanh nghiệp tiếp cận các thị trường quan trọng và nâng cao khả năng cạnh tranh.",
   },
 ];

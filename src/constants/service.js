@@ -5,7 +5,7 @@ import service_3 from "@assets/service/service_3.jpg";
 export const services = [
   {
     id: "service_1",
-    name: "Vận chuyển hàng hoá nhanh",
+    name: "Chuyển phát nhanh Air Express & Logistics đa phương thức",
     image: service_1,
     desc: "Dịch vụ Air Express của An Huy Global Link chuyên cung cấp các giải pháp vận chuyển hàng hóa quốc tế nhanh chóng, an toàn và giá cả hợp lý. Chúng tôi cung cấp vận chuyển bằng đường hàng không cho các mặt hàng có yêu cầu về thời gian giao hàng gấp, giúp doanh nghiệp dễ dàng vận chuyển hàng hóa từ Việt Nam đi các thị trường quốc tế và ngược lại.",
     content: [
@@ -28,7 +28,7 @@ export const services = [
   },
   {
     id: "service_2",
-    name: "Dịch vụ du lịch chuyên chuyến Trung Quốc",
+    name: "Du lịch chuyên chuyến Trung Quốc",
     image: service_2,
     desc: "An Huy Global Link tổ chức các chuyến du lịch chuyên tuyến Trung Quốc, mang lại cơ hội giao thương và kết nối đối tác giữa Việt Nam và Trung Quốc. Dịch vụ này không chỉ đơn thuần là du lịch, mà còn là cơ hội để các doanh nghiệp gặp gỡ, trao đổi thông tin và thiết lập những mối quan hệ hợp tác lâu dài.",
     content: [
@@ -51,7 +51,7 @@ export const services = [
   },
   {
     id: "service_3",
-    name: "Tư vấn thương mại quốc tế",
+    name: "Thương mại quốc tế",
     image: service_3,
     desc: "Với đội ngũ chuyên gia có hơn 15 năm kinh nghiệm trong ngành xuất nhập khẩu và giao thương quốc tế, An Huy Global Link cung cấp dịch vụ tư vấn thương mại quốc tế chuyên sâu, giúp các doanh nghiệp vượt qua các rào cản pháp lý, tối ưu hóa các chiến lược xuất nhập khẩu và phát triển mạnh mẽ trên thị trường quốc tế.",
     content: [

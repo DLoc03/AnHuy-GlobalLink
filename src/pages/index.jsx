@@ -13,11 +13,19 @@ import React from "react";
 function Portfolio() {
   const handleScrollSection = (sectionId) => {
     const el = document.getElementById(sectionId);
-    el?.scrollIntoView({
+    const header = document.getElementById("header");
+
+    if (!el) return;
+
+    const headerHeight = header?.offsetHeight || 0;
+    const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: elementPosition - headerHeight - 100,
       behavior: "smooth",
-      block: "start",
     });
   };
+
   return (
     <div className="bg-white">
       <Header onScroll={handleScrollSection} />

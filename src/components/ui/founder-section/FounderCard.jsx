@@ -12,7 +12,7 @@ function FounderCard({ founder }) {
         <img
           src={founder.image}
           alt={founder.name}
-          className="h-56 w-full rounded-3xl object-cover sm:h-64 lg:h-80 xl:h-68"
+          className="h-64 w-full rounded-3xl object-cover lg:h-80"
         />
         <div className="absolute bottom-4 z-10 flex w-full justify-center lg:bottom-6">
           <div className="rounded-full border-2 border-white bg-black/50 px-6 py-1 text-sm text-white">

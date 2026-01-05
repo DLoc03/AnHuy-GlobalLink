@@ -7,8 +7,10 @@ export const abouts = [
     id: "intro",
     title: "Giới thiệu về An Huy Global Link",
     content: [
-      "Công ty TNHH TMDV Xuất Nhập Khẩu An Huy Global Link là một công ty chuyên cung cấp các dịch vụ vận chuyển hàng hóa quốc tế, tổ chức các buổi giao thương quốc tế và tư vấn thương mại xuất nhập khẩu, với tầm nhìn trở thành đối tác chiến lược hàng đầu trong lĩnh vực giao thương toàn cầu.",
-      "Với đội ngũ sáng lập giàu kinh nghiệm và chuyên môn trong ngành vận chuyển hàng không và thương mại quốc tế, An Huy Global Link luôn mang đến các giải pháp tối ưu và linh hoạt cho khách hàng, đảm bảo vận chuyển nhanh chóng, an toàn, và chi phí hợp lý. Công ty cam kết mang đến cho các đối tác những dịch vụ uy tín, chất lượng cao, giúp tối ưu hóa lợi nhuận và phát triển bền vững trong môi trường kinh doanh quốc tế.",
+      "An Huy Globallink là công ty TNHH hoạt động trong lĩnh vực chuyển phát nhanh nội địa & quốc tế. Tổ chức và tư vấn thương mại xuất, nhập khẩu quốc tế.",
+      "Chúng tôi vận hành với trọng tâm rõ ràng vào độ tin cậy, tính minh bạch và hợp tác dài hạn.",
+      "Mục tiêu của An Huy Globallink là cung cấp các giải pháp hiệu quả và thực tiễn cho dòng chảy hàng hóa xuyên biên giới.",
+      "Nguyên tắc làm việc của chúng tôi rất đơn giản: giữ đúng cam kết, quản trị rủi ro có trách nhiệm và tạo ra giá trị bền vững cho đối tác.",
     ],
     image: intro,
   },
@@ -16,7 +18,8 @@ export const abouts = [
     id: "mission",
     title: "Sứ mệnh",
     content: [
-      "Sứ mệnh của An Huy Global Link là cung cấp các giải pháp vận chuyển hàng hóa quốc tế, tư vấn xuất nhập khẩu, và dịch vụ du lịch chuyên tuyến Trung Quốc với chất lượng cao nhất, hỗ trợ khách hàng tối đa trong việc kết nối và phát triển trên các thị trường quốc tế. Chúng tôi luôn tận tâm cung cấp các dịch vụ phù hợp với yêu cầu và mong muốn của khách hàng, cam kết mang đến sự tin cậy, chuyên nghiệp và hiệu quả trong mọi giao dịch.",
+      "Hỗ trợ hoạt động thương mại xuyên biên giới thông qua các giải pháp thương mại và logistics hiệu quả, minh bạch.",
+      "Hợp tác để thúc đẩy doanh nghiệp và các đối tác phát triển bền vững, có trách nhiệm với cộng đồng và môi trường thông qua việc áp dụng các công nghệ Số hóa, các giải pháp Xanh tiên tiến trên Thế giới.",
     ],
     image: mission,
   },
@@ -24,7 +27,8 @@ export const abouts = [
     id: "vision",
     title: "Tầm nhìn",
     content: [
-      "Tầm nhìn của chúng tôi là trở thành một trong những công ty dẫn đầu trong ngành vận chuyển và giao thương quốc tế, đặc biệt là trên các tuyến Bắc Âu và Châu Á, thông qua việc duy trì sự đổi mới không ngừng, chất lượng dịch vụ vượt trội và sự hỗ trợ tận tình cho các đối tác.",
+      "Trở thành đối tác thương mại và logistics đáng tin cậy, kết nối Việt Nam với các thị trường quốc tế, đặc biệt là những khu vực có tiêu chuẩn cao và đề cao sự tin cậy và minh bạch.",
+      "Áp dụng công nghệ Số hóa và các giải pháp Xanh cho sự phát triển bền vững của doanh nghiệp.",
     ],
     image: vision,
   },
