@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import CommitCard from "./CommitCard";
 import { commits } from "@/constants/commit";
 import { motion, AnimatePresence } from "framer-motion";
+import MotionWrapper from "@/common/animations/MotionWrapper";
+import { fadeInUp } from "@/common/animations/motionVariants";
 
 function CommitSection() {
   const [selected, setSelected] = useState(null);
@@ -11,32 +13,52 @@ function CommitSection() {
   return (
     <>
       <div id={sectionIds.commit} className="grid grid-cols-5 gap-x-6 gap-y-3">
-        <div className="col-span-5">
+        <MotionWrapper variant={fadeInUp} className="col-span-5">
           <HeadingPill label={"Cam kết"} />
-        </div>
+        </MotionWrapper>
 
-        <div className="col-span-5 sm:col-span-3">
+        <MotionWrapper
+          variant={fadeInUp}
+          delay={0.2}
+          className="col-span-5 sm:col-span-3"
+        >
           <h1 className="text-xl font-medium sm:max-w-sm sm:text-3xl lg:max-w-md">
             Cam kết của chúng tôi
           </h1>
-        </div>
+        </MotionWrapper>
 
-        <div className="col-span-5 sm:col-span-2">
+        <MotionWrapper
+          variant={fadeInUp}
+          delay={0.4}
+          className="col-span-5 sm:col-span-2"
+        >
           <p className="text-md font-light text-gray-500 sm:max-w-sm lg:max-w-md">
             Chúng tôi mang đến các giải pháp vận chuyển nhanh chóng, an toàn,
             tối ưu chi phí và cam kết dịch vụ uy tín, chất lượng cao
           </p>
-        </div>
+        </MotionWrapper>
 
-        <div className="col-span-5 xl:col-span-3">
+        <MotionWrapper
+          variant={fadeInUp}
+          delay={0.6}
+          className="col-span-5 xl:col-span-3"
+        >
           <CommitCard commit={commits[0]} onSelected={setSelected} />
-        </div>
-        <div className="col-span-5 sm:col-span-3 xl:col-span-1">
+        </MotionWrapper>
+        <MotionWrapper
+          variant={fadeInUp}
+          delay={0.8}
+          className="col-span-5 sm:col-span-3 xl:col-span-1"
+        >
           <CommitCard commit={commits[1]} onSelected={setSelected} />
-        </div>
-        <div className="col-span-5 sm:col-span-2 xl:col-span-1">
+        </MotionWrapper>
+        <MotionWrapper
+          variant={fadeInUp}
+          delay={1}
+          className="col-span-5 sm:col-span-2 xl:col-span-1"
+        >
           <CommitCard commit={commits[2]} onSelected={setSelected} />
-        </div>
+        </MotionWrapper>
       </div>
 
       <AnimatePresence>

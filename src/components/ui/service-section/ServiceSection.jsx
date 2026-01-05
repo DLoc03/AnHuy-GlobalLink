@@ -5,6 +5,8 @@ import ServiceCard from "./ServiceCard";
 
 import { motion, AnimatePresence } from "framer-motion";
 import HeadingPill from "@/components/common/HeadingPill";
+import MotionWrapper from "@/common/animations/MotionWrapper";
+import { fadeInUp } from "@/common/animations/motionVariants";
 
 function ServiceSection() {
   const [selected, setSelected] = useState();
@@ -14,21 +16,32 @@ function ServiceSection() {
         id={sectionIds.service}
         className="mx-auto max-w-7xl space-y-2 sm:space-y-3"
       >
-        <HeadingPill label={"Dịch vụ"} />
+        <MotionWrapper variant={fadeInUp}>
+          <HeadingPill label={"Dịch vụ"} />
+        </MotionWrapper>
         <div className="flex flex-col items-end justify-between gap-y-1 sm:flex-row">
-          <h1 className="text-xl font-medium sm:max-w-sm sm:text-3xl lg:max-w-md">
-            Cung cấp chất lượng vượt trội và giải pháp tối ưu
-          </h1>
-          <p className="text-md font-light text-gray-500 sm:max-w-sm lg:max-w-md">
-            Chúng tôi luôn tìm ra giải pháp tối ưu nhất cho khách hàng về giá
-            cả, phương thức vận chuyển và thời gian giao hàng.
-          </p>
+          <MotionWrapper variant={fadeInUp} delay={0.2}>
+            <h1 className="text-xl font-medium sm:max-w-sm sm:text-3xl lg:max-w-md">
+              Cung cấp chất lượng vượt trội và giải pháp tối ưu
+            </h1>
+          </MotionWrapper>
+          <MotionWrapper variant={fadeInUp} delay={0.4}>
+            <p className="text-md font-light text-gray-500 sm:max-w-sm lg:max-w-md">
+              Chúng tôi luôn tìm ra giải pháp tối ưu nhất cho khách hàng về giá
+              cả, phương thức vận chuyển và thời gian giao hàng.
+            </p>
+          </MotionWrapper>
         </div>
         <div className="mt-4 grid grid-cols-3 gap-x-6 gap-y-3 sm:mt-8">
-          {services.map((service) => (
-            <div key={service.id} className="col-span-3 sm:col-span-1">
+          {services.map((service, index) => (
+            <MotionWrapper
+              variant={fadeInUp}
+              delay={0.4 + (index + 1) * 0.2}
+              key={service.id}
+              className="col-span-3 sm:col-span-1"
+            >
               <ServiceCard service={service} onSelected={setSelected} />
-            </div>
+            </MotionWrapper>
           ))}
         </div>
       </div>

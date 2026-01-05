@@ -8,6 +8,8 @@ import TextAreaInput from "../common/TextAreaInput";
 import { services } from "@/constants/service";
 import SelectInput from "../common/SelectInput";
 import Alert from "../common/Alert";
+import MotionWrapper from "@/common/animations/MotionWrapper";
+import { fadeInUp } from "@/common/animations/motionVariants";
 
 function ContactSection() {
   const [formData, setFormData] = useState({
@@ -74,7 +76,8 @@ function ContactSection() {
 
   return (
     <>
-      <div
+      <MotionWrapper
+        variant={fadeInUp}
         id={sectionIds.contact}
         className="relative overflow-hidden rounded-3xl"
         style={{ backgroundImage: `url(${background})` }}
@@ -139,7 +142,7 @@ function ContactSection() {
             </div>
           </div>
         </div>
-      </div>
+      </MotionWrapper>
       {alert && (
         <Alert
           type={alert.type}
