@@ -6,9 +6,11 @@ function HoverUnderlineItem({
   onClick,
   textStyle,
   borderColor,
+  selected,
+  id,
 }) {
   const [isHover, setIsHover] = useState(false);
-
+  const isActive = selected === id;
   return (
     <button
       className={`cursor-pointer ${className}`}
@@ -18,7 +20,7 @@ function HoverUnderlineItem({
     >
       <p className={textStyle}>{label}</p>
       <div
-        className={`${isHover ? "w-full" : "w-0"} h-1 bg-${borderColor} transition-all duration-200`}
+        className={`${isHover || isActive ? "w-full" : "w-0"} h-1 bg-${borderColor} transition-all duration-200`}
       />
     </button>
   );

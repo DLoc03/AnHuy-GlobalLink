@@ -9,7 +9,7 @@ import HoverUnderlineItem from "../common/HoverUnderlineItem";
 import { headers } from "@/constants/header";
 import { sectionIds } from "@/constants/sectionId";
 
-function Header({ onScroll }) {
+function Header({ onScroll, selected }) {
   const [isScroll, setIsScroll] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [isClick, setIsClick] = useState(false);
@@ -41,10 +41,12 @@ function Header({ onScroll }) {
             <HoverUnderlineItem
               key={menu.id}
               label={menu.label}
-              className={"w-fit py-3"}
+              className={`w-fit py-3`}
               borderColor={"secondary"}
               textStyle={"text-md text-secondary font-medium"}
               onClick={() => onScroll?.(menu.id)}
+              selected={selected}
+              id={menu.id}
             />
           ))}
         </div>

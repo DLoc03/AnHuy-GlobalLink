@@ -8,10 +8,12 @@ import HeroSection from "@/components/ui/HeroSection";
 import PartnerSection from "@/components/ui/PartnerSection";
 import ServiceSection from "@/components/ui/service-section/ServiceSection";
 import WhyChooseSection from "@/components/ui/why-choose-section/WhyChooseSection";
-import React from "react";
+import React, { useState } from "react";
 
 function Portfolio() {
+  const [selected, setSelected] = useState();
   const handleScrollSection = (sectionId) => {
+    setSelected(sectionId);
     const el = document.getElementById(sectionId);
     const header = document.getElementById("header");
 
@@ -28,7 +30,7 @@ function Portfolio() {
 
   return (
     <div className="bg-white">
-      <Header onScroll={handleScrollSection} />
+      <Header onScroll={handleScrollSection} selected={selected} />
       <HeroSection onSCroll={handleScrollSection} />
 
       <div className="mx-auto h-full max-w-7xl space-y-6 px-2 py-6 xl:px-0">
