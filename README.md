@@ -1,16 +1,74 @@
-# React + Vite
+An Huy Global Link – Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Project Overview
 
-Currently, two official plugins are available:
+An Huy Global Link is a landing page project used to introduce the company’s services and brand information.
+The website focuses on a clean UI, responsive design, and smooth animations to enhance user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project type: Company Landing Page
+Target users: Public visitors / potential customers
 
-## React Compiler
+2. Tech Stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- React 19
+- Vite 7 (build tool)
+- Tailwind CSS 4
+- Framer Motion (animations)
+- Lucide React / React Icons (icons)
+- Tooling
+- ESLint
+- Prettier + Tailwind plugin
 
-## Expanding the ESLint configuration
+3. Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Company service introduction sections
+- Responsive layout for desktop and mobile
+- Smooth animations and transitions
+- Reusable UI components
+- Static content optimized for fast loading
+
+5. Prerequisites
+
+- Make sure the following are installed:
+- Node.js: v18 or later (recommended)
+- npm / yarn / pnpm
+- Git
+
+6. Installation
+
+- Clone the repository and install dependencies:
+- git clone https://github.com/DLoc03/AnHuy-GlobalLink.git
+- cd xnk
+- npm install
+
+Or using yarn:
+yarn install
+
+Or using pnpm:
+pnpm install
+
+7. Run Development Server
+   npm run dev
+
+The application will be available at:
+http://localhost:5173
+
+8. Build for Production
+   npm run build
+
+9. Deployment Guide
+   This is a static React (Vite) project and can be deployed on any static hosting service.
+   - Pull latest code from repository
+   - Install dependencies
+   - Run npm run build
+   - Upload dist/ folder to hosting service
+
+10. Code Quality & Formatting
+    - ESLint is configured for basic React rules
+    - Prettier is used for code formatting
+    - Tailwind CSS class sorting is handled via Prettier plugin
+
+11. Known Limitations / Notes
+    - This project is a static landing page (no backend integration).
+    - Content updates require code changes and redeployment.
+    - Animations rely on Framer Motion; excessive usage may affect performance on low-end devices.
