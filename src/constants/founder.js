@@ -4,7 +4,7 @@ import ben_tran from "@assets/founder/ben_tran.jpg";
 export const founders = [
   {
     id: "kalex_nguyen",
-    name: "Mr. An Kalex Nguyễn",
+    name: "Kalex Nguyen",
     position: "Nhà sáng lập",
     image: kalex_nguyen,
     content:
@@ -12,7 +12,7 @@ export const founders = [
   },
   {
     id: "ben_tran",
-    name: "Mr. Huy Ben Trần",
+    name: "Ben Tran",
     position: "Nhà sáng lập",
     image: ben_tran,
     content:
