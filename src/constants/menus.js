@@ -27,7 +27,7 @@ const menuHeader = [
   },
   {
     id: sectionIds.contact,
-    label: "Contact",
+    label: "Liên hệ",
   },
 ];
 
